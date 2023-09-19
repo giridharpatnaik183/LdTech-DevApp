@@ -63,6 +63,7 @@ sonar.host.url=http://13.234.23.179:9000/
 sonar.login=squ_8b9fa4d283c706508eec2325a4c3e0919db56b79
 
 # Pipeline script
+
 pipeline {
     agent any
 
