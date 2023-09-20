@@ -9,7 +9,7 @@ WORKDIR /app
  
 
 # Cache and Install dependencies
-COPY package.json ./
+COPY package*.json ./
 COPY package-lock.json .  # Use package-lock.json for npm
 RUN npm install           # Use npm to install dependencies
 
@@ -21,7 +21,7 @@ COPY . .
  
 
 # Expose port
-EXPOSE 3000
+EXPOSE 4000
 
  
 
