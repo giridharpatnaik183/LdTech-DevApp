@@ -13,6 +13,7 @@ import Signin from './components/pages/Signin';
 import Signup from './components/Subpages/Signup';
 import Signout from './components/pages/Signout';
 import Newdeployment from './components/Subpages/Newdeployment';
+import Logfiles from './components/Subpages/Logfiles';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/github" element={<Github />} />
         <Route path="/history" element={<History />} />
         <Route path="/testing" element={<Testing />} />
+        <Route path='/testing/testgrafana' element={<Logfiles />} />
         <Route path="/contact" element={<Maincontact />} />
         <Route path="/signin" element={<Signin setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/signup" element={<Signup />} />
