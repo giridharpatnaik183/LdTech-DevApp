@@ -109,6 +109,10 @@
   padding: 20px;
   margin-top: 20px;
 }
+
+.github-form input{
+  background-color: #e5e3e3;
+}
 .git-head p{
   font-size: large;
   margin-top: 10px;
@@ -152,6 +156,10 @@
   background-color: #f2f2f2;
 }
 
+.git-container .button-container{
+  display: flex;
+}
+
 
 /* Table styles */
   .table-container {
@@ -162,8 +170,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
   }
   
-
-
 .button-group button {
   padding: 10px 10px;
   margin-right: 10px;
@@ -180,7 +186,7 @@
   margin-right: 5px;
 }
 
-.authorize-button {
+.git-head .authorize-button {
   background-color: #4caf50;
   color: white;
 }
@@ -258,7 +264,6 @@
 }
 
 
-
 /* Signup.css */
 
 .signup-container {
@@ -313,4 +318,222 @@
   text-align: center;
   justify-content: center;
 }
+
+
+/* Cijob style */
+
+.main-cijob {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+.search-container p {
+  margin-right: 10px; 
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  margin-left: 10px;
+}
+
+.search-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.search-container table, th, td {
+  border: 1px solid #ccc;
+}
+
+.search-container th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.search-container thead {
+  background-color: #f2f2f2;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #45a049;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+ .pagination button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Testing Page style */
+
+.main-container {
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.search-container{
+  margin-top: 20px;
+}
+.prosort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style for the left paragraph */
+.prosort p:first-child {
+  margin-right: auto;
+}
+
+/* Add additional styling as needed */
+.prosort select {
+  margin-left: 10px; /* Add some spacing between "SortBy" and the select element */
+}
+
+.project-div {
+  /* Your existing styles for project divs */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  display: flex; /* Add flex display for positioning */
+  justify-content: space-between; /* Space elements evenly in the container */
+}
+
+.project-info {
+  /* Styles for project name and last analysis */
+  display: flex; /* Display project name and last analysis side by side */
+  flex-direction: column; /* Stack project name and last analysis vertically */
+}
+
+.project-name {
+  /* Your existing styles for project names */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.last-analysis {
+  /* Your existing styles for last analysis */
+  font-size: 14px;
+  color: #666;
+}
+
+.bugs {
+  /* Styles for the Bugs count */
+  font-size: 14px;
+  color: red; /* You can choose your preferred color */
+}
+.issue-item {
+  margin-bottom: 10px;
+}
+
+.issue-box {
+  display: flex; /* Use flexbox to arrange content */
+  border: 1px solid #ccc; /* Add a border around the issue box */
+  padding: 10px; /* Add some padding inside the issue box */
+}
+
+.issue-content {
+  flex: 1; /* Grow to fill available space */
+}
+
+.issue-details {
+  text-align: right; /* Align "Effort" and "Date" to the right */
+}
+
+
+.alert-status {
+  /* Your styles for alert-status here */
+  font-weight: 20px;
+  margin-left: 8px; /* Add margin to separate the project name and alert status */
+  padding: 4px 8px; /* Add padding for background color */
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  color: white; /* White text color */
+  border-radius: 15px;
+  font-size: small;
+}
+
+.alert-status.error {
+  background-color: rgb(209, 72, 72); /* Red background for error status */
+}
+
+.alert-status.ok {
+  background-color: green; /* Green background for ok status */
+  color: white; /* White text color */
+}
+.total-issues {
+  margin-top: 20px; /* Adjust the top margin as needed */
+  margin-bottom: 20px; /* Adjust the bottom margin as needed */
+}
+
+.nav {
+  text-align: center;
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.nav-items {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px; /* Adjust the left and right margin as needed */
+  cursor: pointer;
+  color: black; /* Change the text color */
+  position: relative; /* Required for positioning the line */
+  font-weight: bold;
+}
+
+.nav-items.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: #0056b3; /* Change the line color for the active tab */
+  transform-origin: center;
+  transform: scaleX(0); /* Initially, the line is invisible */
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-items:hover::after,
+.nav-items.active::after {
+  transform: scaleX(1); /* On hover or when active, expand the line to full width */
+}
+
+
+
+
+
+
 

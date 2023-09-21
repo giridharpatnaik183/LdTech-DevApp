@@ -6,7 +6,12 @@ export const Testmenuitems = [
     },
     {
       title: 'Log Files',
-      path: '/testgraphana',
+      path: '/testing/testgrafana',
+      cName: 'dropdown-link'
+    },
+    {
+      title: 'Selenium',
+      path: '/testing/testselenium',
       cName: 'dropdown-link'
     }
   ];
