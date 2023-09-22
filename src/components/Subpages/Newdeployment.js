@@ -6,7 +6,9 @@ export default function Newdeployment() {
     <>
       <div className='newdeploy-page'>
         <table className='newdeploy-table'>
+          
           <tbody>
+            <form>
             <tr>
               <td><label htmlFor='name'>Name:</label></td>
               <td><input type='text' /></td>
@@ -54,6 +56,7 @@ export default function Newdeployment() {
               <td><label htmlFor='scriptPath'>Script Path:</label></td>
               <td><input type='text' /></td>
             </tr>
+            </form>
           </tbody>
         </table>
         <div className='deploy-btn'>
