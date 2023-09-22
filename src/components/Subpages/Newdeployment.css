@@ -34,7 +34,7 @@
     border-radius: 4px;
   }
   
-  .newdeploy-table button {
+ /*  .newdeploy-table button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -42,15 +42,28 @@
     margin: 10px 0;
     cursor: pointer;
     border-radius: 4px;
-  }
+  } */
   
   .newdeploy-table button:hover {
     background-color: #0056b3;
   }
-  
-
 
   .newdeploy-table th td {
     padding: 12px 15px;
     text-align: left;
+  }
+
+  .deploy-btn .deploy-save{
+    background-color: #007bff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px 10px 0px 80px;
+  }
+  .deploy-btn .deploy-apply{
+    background-color: #007bff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px 0px 0px 10px;
   }

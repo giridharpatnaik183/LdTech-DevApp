@@ -1,0 +1,29 @@
+version: '3.2'
+
+services:
+  back:
+    container_name: demo-back-end
+    build:
+      context: ./back-end/
+      dockerfile: Dockerfile
+    volumes:
+      - ./back-end/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - DB_CON_STR=${DB_CON_STR}
+      - SERVER_PORT=${SERVER_PORT}
+      - JWT_SECRET=${JWT_SECRET}
+      - CHOKIDAR_USEPOLLING=true
+  front:
+    container_name: demo-front-end
+    image: nginx:alpine  # Use a pre-built NGINX image as a placeholder
+    ports:
+      - '3000:80'  # Map port 80 in the container to port 3000 on the host
+    depends_on:
+      - back
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${CLIENT_PORT}
