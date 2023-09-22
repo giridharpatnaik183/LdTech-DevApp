@@ -7,7 +7,7 @@ class User {
     try {
       const hashedPassword = await bcrypt.hash(password, 10);
       const [results] = await pool.execute(
-        'INSERT INTO users (username, email, password) VALUES (?, ?, ?)',
+        'INSERT INTO user (username, email, password) VALUES (?, ?, ?)',
         [username, email, hashedPassword]
       );
       return results.insertId;
