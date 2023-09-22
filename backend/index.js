@@ -262,6 +262,43 @@ app.get('/api/grafana', async(req, res) => {
   }
 })
 
+
+// Define an endpoint to trigger the Jenkins build
+app.post('/trigger-build', async (req, res) => {
+  try {
+    // Replace with your Jenkins server URL and job name
+    const jenkinsUrl = 'http://jenkins-server/job/job-name/buildWithParameters';
+    
+    // Replace with your Jenkins job parameters
+    const jobParameters = {
+      name: req.body.name,
+      style: req.body.style,
+      buildTrigger: req.body.buildTrigger,
+      // Add other parameters here
+    };
+
+    const response = await axios.post(jenkinsUrl, null, {
+      params: jobParameters,
+      auth: {
+        username: 'DevOpsLD',
+        password: 'DevOpsLD@2023',
+      },
+    });
+
+    if (response.status === 201) {
+      res.status(200).json({ message: 'Build triggered successfully' });
+    } else {
+      res.status(500).json({ message: 'Error triggering build' });
+    }
+  } catch (error) {
+    console.error('Error triggering build:', error);
+    res.status(500).json({ message: 'Error triggering build' });
+  }
+});
+
+
+
+
 //App running on port 
 app.listen(PORT, (err)=>{
   if(err){

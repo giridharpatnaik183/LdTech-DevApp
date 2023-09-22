@@ -56,9 +56,9 @@ export default function Newdeployment() {
             </tr>
           </tbody>
         </table>
-        <div>
-          <button>Save</button>
-          <button>Apply</button>
+        <div className='deploy-btn'>
+          <button className='deploy-save'>Save</button>
+          <button className='deploy-apply'>Apply</button>
         </div>
       </div>
     </>
