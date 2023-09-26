@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://13.234.23.179:3001/contact/submit', Data);
+      const response = await axios.post('http://13.234.23.179:3004/contact/submit', Data);
       console.log(response.data);
       setMessage('We will contact you soon');
       setError('');
